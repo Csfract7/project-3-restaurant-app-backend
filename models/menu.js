@@ -6,7 +6,8 @@ const RestaurantSchema = new mongoose.Schema({
     address: {type:'String'},
     phone: {type:'String'},
     hours: {type:'String'},
-    image: {type:'String' }
+    image: {type:'String' },
+    menu: {MenuSchema}
 })
 
 const MenuSchema = new mongoose.Schema({
@@ -18,7 +19,7 @@ const MenuSchema = new mongoose.Schema({
     
   });
   
-  const Rest = mongoose.model("Restaurant", RestaurantSchema);
-  const Menu = mongoose.model("Menu", MenuSchema);
+  const Menu = mongoose.model("Menu", RestaurantSchema);
+//   const Menu = mongoose.model("Menu", MenuSchema);
   
-  module.exports = {Rest, Menu}
+  module.exports = Menu

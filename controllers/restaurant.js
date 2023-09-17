@@ -6,7 +6,7 @@ const db = require('../models')
 const getRes = async (req, res) => {
     
     try{
-        const foundRes = await db.Restaurant.find({})
+        const foundRes = await db.Menu.find({})
         if(!foundRes){
             res.status(404).json({message: "Cannot find Restaurant"})
         } else {
@@ -21,7 +21,7 @@ const getRes = async (req, res) => {
 const createRes = async (req, res) => {
     try{
         
-        const createdRes = await db.Restaurant.create(req.body)
+        const createdRes = await db.Menu.create(req.body)
        
 
         createdRes.save()
@@ -40,7 +40,7 @@ const createRes = async (req, res) => {
 // Restaurant UPDATE ROUTE
 const updateRes = async (req, res) => {
     try{
-        const updatedRes = await db.Restaurant.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        const updatedRes = await db.Menu.findByIdAndUpdate(req.params.id, req.body, {new: true})
         if(!updatedRes){
             res.status(400).json({message: 'Could not update Restaurant'})
         } else {
@@ -54,7 +54,7 @@ const updateRes = async (req, res) => {
 // Restaurant DESTROY ROUTE
 const deleteRes = async (req, res) => {
     try {
-        const deletedRes = await db.Restaurant.findByIdAndDelete(req.params.id)
+        const deletedRes = await db.Menu.findByIdAndDelete(req.params.id)
         if(!deletedRes){
             res.status(400).json({message: 'Could not delete Restaurant'})
         } else {
