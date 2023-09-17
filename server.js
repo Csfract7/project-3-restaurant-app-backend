@@ -3,6 +3,7 @@ const { PORT } = process.env;
 const express = require("express");
 const app = express();
 const routes = require('./routes/index')
+const cors = require('cors')
 
 app.use(cors('*')); // to prevent cors errors, open access to all origins
 app.use(express.urlencoded({extended: true}))
