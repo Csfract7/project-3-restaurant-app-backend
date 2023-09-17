@@ -2,7 +2,6 @@ require("dotenv").config();
 const { PORT } = process.env;
 const express = require("express");
 const app = express();
-const cors = require("cors")
 const routes = require('./routes/index')
 
 app.use(cors('*')); // to prevent cors errors, open access to all origins

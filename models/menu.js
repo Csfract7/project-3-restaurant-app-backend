@@ -6,7 +6,7 @@ const RestaurantSchema = new mongoose.Schema({
     address: {type:'String'},
     phone: {type:'String'},
     hours: {type:'String'},
-    images: {type:'ObjectId' }
+    image: {type:'String' }
 })
 
 const MenuSchema = new mongoose.Schema({
@@ -14,10 +14,11 @@ const MenuSchema = new mongoose.Schema({
     description: {type:'String'},
     price: {type:'String'},
     category: {type:'String'},
-    image: {type:'ObjectId'}
+    image: {type:'String'}
     
   });
   
+  const Rest = mongoose.model("Restaurant", RestaurantSchema);
   const Menu = mongoose.model("Menu", MenuSchema);
   
-  module.exports = Menu
+  module.exports = {Rest, Menu}
