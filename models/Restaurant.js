@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { MenuSchema } = require('./Menu') //Based on line 11, we need to import MenuSchema
+//const { MenuSchema } = require('./Menu') //Based on line 11, we need to import MenuSchema
 
 const restaurantSchema = new mongoose.Schema({
     name: {type:'String'},

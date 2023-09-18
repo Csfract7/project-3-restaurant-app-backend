@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
-const Restaurant = require("./Restaurant");
+const mongoose = require("mongoose")
 const {DATABASE_URL} = process.env
+const Menu = require("./Menu")
+const Restaurant = require("./Restaurant")
 
 // DATABASE CONNECTION
 // Establish Connection
@@ -14,11 +15,11 @@ mongoose.connect(DATABASE_URL, {
 mongoose.connection
   .on("open", () => console.log("You are connected to mongoose"))
   .on("close", () => console.log("You are disconnected from mongoose"))
-  .on("error", (error) => console.log(error));
+  .on("error", (error) => console.log(error))
 
 
 //all code above this
 module.exports = {
-  Menu: require('./Menu'),
-  Restaurant: require('./Restaurant')
+  Menu,
+  Restaurant
 }
