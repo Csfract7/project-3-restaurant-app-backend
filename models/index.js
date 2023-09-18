@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const {DATABASE_URL} = process.env
-const Menu = require("./Menu")
+const Menu = require("./menu")
 const Restaurant = require("./Restaurant")
 
 // DATABASE CONNECTION
