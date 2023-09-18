@@ -1,16 +1,25 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 const {DATABASE_URL} = process.env
+const Menu = require("./menu")
+const Restaurant = require("./Restaurant")
 
+// DATABASE CONNECTION
+// Establish Connection
 mongoose.connect(DATABASE_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
+
+
 // Connection Events
 mongoose.connection
   .on("open", () => console.log("You are connected to mongoose"))
   .on("close", () => console.log("You are disconnected from mongoose"))
-  .on("error", (error) => console.log(error));
+  .on("error", (error) => console.log(error))
 
-  module.exports = {
-    Menu: require('./menu')
+
+//all code above this
+module.exports = {
+  Menu,
+  Restaurant
 }

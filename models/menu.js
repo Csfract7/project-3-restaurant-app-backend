@@ -1,14 +1,4 @@
-const { mongoose } = require("mongoose");
-
-const RestaurantSchema = new mongoose.Schema({
-    name: {type:'String'},
-    description: {type:'String'},
-    address: {type:'String'},
-    phone: {type:'String'},
-    hours: {type:'String'},
-    image: {type:'String' },
-    menu: {MenuSchema}
-})
+const mongoose = require("mongoose");
 
 const MenuSchema = new mongoose.Schema({
     name: {type:'String'},
@@ -16,10 +6,9 @@ const MenuSchema = new mongoose.Schema({
     price: {type:'String'},
     category: {type:'String'},
     image: {type:'String'}
-    
-  });
+  }, {timestamps: true});
   
-  const Menu = mongoose.model("Menu", RestaurantSchema);
+const Menu = mongoose.model("Menu", MenuSchema);
 //   const Menu = mongoose.model("Menu", MenuSchema);
   
   module.exports = Menu
