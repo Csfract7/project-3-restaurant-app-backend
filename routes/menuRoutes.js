@@ -1,13 +1,13 @@
 const router = require('express').Router()
 
-//all functions/methods imported from menu's controller's index.js
-const { menuCtrl } = require('../controllers')
+//all functions/methods imported from controller's index.js
+const { menuCtrls } = require('../controllers')
 
 
 // ROUTES - METHODS
-router.get("/", menuCtrl.getMenu)
-router.post("/", menuCtrl.createMenu)
-router.put('/:id', menuCtrl.updateMenu)
-router.delete('/:id', menuCtrl.deleteMenu)
+router.get("/", menuCtrls.getMenu)
+router.post("/", menuCtrls.createMenu)
+router.put('/:id', menuCtrls.updateMenu)
+router.delete('/:id', menuCtrls.deleteMenu)
 
 module.exports = router;
