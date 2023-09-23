@@ -1,13 +1,13 @@
 const router = require('express').Router()
 
 //all functions/methods imported from restaurant's controller's index.js
-const { restaurantCtrl } = require('../controllers')
+const { restaurantCtrls } = require('../controllers')
 
 
 // ROUTES - METHODS
-router.get("/", restaurantCtrl.getRestaurant)
-router.post("/", restaurantCtrl.createRestaurant)
-router.put('/:id', restaurantCtrl.updateRestaurant)
-router.delete('/:id', restaurantCtrl.deleteRestaurant)
+router.get("/", restaurantCtrls.getRestaurant)
+router.post("/", restaurantCtrls.createRestaurant)
+router.put('/:id', restaurantCtrls.updateRestaurant)
+router.delete('/:id', restaurantCtrls.deleteRestaurant)
 
 module.exports = router;
