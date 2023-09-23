@@ -36,6 +36,7 @@ app.use(express.urlencoded({extended: true}))
 
 //check the routes index.js for ALL routes so we save space on server.js
 app.use('/', routes)
+//app.use(cors())
 
 //catch all 404 route! 
 //404 means missing
