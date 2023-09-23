@@ -17,10 +17,16 @@ const routes = require('./routes/index')
 const cors = require('cors')
 
 
+const methodOverride = require('method-override')
+
 // MiddleWare
 app.use(cors()); //to prevent cors errors, open access to all origins
 app.use(express.urlencoded({extended: true}))
 app.use(express.json()); // parse json bodies
+
+// config
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended: true}))
 
 
 // ROUTES
