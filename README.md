@@ -1,5 +1,5 @@
 # project-3-restaurant-app-backend
-
+This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 ### Screenshots
 ##### Data!
 ![Menu Route](assets/image.png)
