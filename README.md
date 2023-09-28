@@ -10,7 +10,7 @@ This restaurant web application makes it easy for restaurant owner to create and
 ## Technologies Used
 - MongoDB/Mongoose (Backend)
 - Express (Backend)
-= Heroku(Deployment)
+- Heroku (Deployment)
 - React (Frontend)
 - Node(Frontend)
 
