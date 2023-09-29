@@ -25,6 +25,6 @@ Also check out our Trello where production was organized! : [Trello Management](
 - Owner Authentication, this system ensures that only the owner can sign in and access or update their restaurant's information.
 - Create a gallery page to display pictures of restaurant's food and ambiance.
 - Improve the website design to make it more enjoyable for users.
-- Add menu sections like 'Starters', 'Salads', 'Main Courses', 'Kids Menu', 'Desserts' and 'Beverages' to make it easier for customers to find what they want on the menu.
+
 
 Your contributions and ideas are always welcome!
